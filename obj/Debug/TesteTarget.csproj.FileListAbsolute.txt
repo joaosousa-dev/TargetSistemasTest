@@ -1,0 +1,7 @@
+C:\Users\Lenovo\Desktop\TesteTarget\bin\Debug\TesteTarget.exe.config
+C:\Users\Lenovo\Desktop\TesteTarget\bin\Debug\TesteTarget.exe
+C:\Users\Lenovo\Desktop\TesteTarget\bin\Debug\TesteTarget.pdb
+C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.exe
+C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.pdb
