@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
@@ -38,6 +39,9 @@ namespace TesteTarget
                         break;
                     case 4:
                         questao4();
+                        break;
+                    case 5:
+                        questao5();
                         break;
                     default:
                         Console.WriteLine("Insira um valor válido");
@@ -86,22 +90,53 @@ namespace TesteTarget
         }
         public static void questao3()
         {
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            var path = Environment.CurrentDirectory;
-            var arquivo = Directory.GetParent(path);
-            using (StreamReader r = new StreamReader(arquivo + @"\dados.json"))
-            {
-                string json = r.ReadToEnd();
-                dynamic array = serializer.DeserializeObject(json);
-                Console.WriteLine("");
-                Console.WriteLine(serializer.Serialize(array));
-                Console.WriteLine("");
-                Console.WriteLine("MAIOR VALOR : " + json.Count());
 
-                Console.WriteLine("Pressione qualquer tecla para sair");
-                Console.ReadKey();
+            var json = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/dados.json");
+
+            var js = new DataContractJsonSerializer(typeof(List<Dados>));
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
+            var dados = (List<Dados>)js.ReadObject(ms);
+
+            double maior = 0, menor = 99999999, diaMaior = 0, diaMenor = 0, totalpmes = 0;
+            for (int i = 0; i < 30; i++)
+            {
+                if (dados[i].valor > 0)
+                    totalpmes += dados[i].valor;
+            }
+
+            double mediamensal = totalpmes / 30;
+            for (int i = 0; i < 30; i++)
+            {
+                if (dados[i].valor > maior)
+                {
+                    maior = dados[i].valor;
+                    diaMaior = dados[i + 1].dia;
+                }
+            }
+            for (int i = 0; i < 30; i++)
+            {
+                if (dados[i].valor < menor)
+                {
+                    menor = dados[i].valor;
+                    diaMenor = dados[i + 1].dia;
+                }
 
             }
+            int count = 0;
+            for (int i = 0; i < 30; i++)
+            {
+                if (dados[i].valor > mediamensal)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("O maior faturamento foi de: {0} dia {1}", maior, diaMaior);
+            Console.WriteLine("O menor faturamento foi de: {0} dia {1}", menor, diaMenor);
+            Console.WriteLine("A média de faturamento por mes é: " + mediamensal);
+            Console.WriteLine("Foram {0} dias que o faturamento foi maior que a media mensal de {1}", count, mediamensal);
+            Console.ReadKey();
+
+
         }
         public static void questao4()
         {
@@ -118,6 +153,18 @@ namespace TesteTarget
         }
         public static void questao5()
         {
+            //Sem a função reverse
+            string original = "Teste para target sistemas";
+            char[] inversoArray=original.ToCharArray();
+            char[] originalArray = original.ToCharArray();
+            int lenght = int.Parse(originalArray.Length.ToString());
+            for (int i = 0; lenght>0; i++)
+            {
+                inversoArray[i] = originalArray[lenght - 1];
+                lenght--;
+            }
+            Console.WriteLine(inversoArray); ;
+            Console.ReadKey();
 
         }
     }

@@ -5,3 +5,11 @@ C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.csprojAssemblyReferenc
 C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.exe
 C:\Users\Lenovo\Desktop\TesteTarget\obj\Debug\TesteTarget.pdb
+C:\Users\Lenovo\Desktop\TargetSistemasTest\bin\Debug\TesteTarget.exe.config
+C:\Users\Lenovo\Desktop\TargetSistemasTest\bin\Debug\TesteTarget.exe
+C:\Users\Lenovo\Desktop\TargetSistemasTest\bin\Debug\TesteTarget.pdb
+C:\Users\Lenovo\Desktop\TargetSistemasTest\obj\Debug\TesteTarget.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\TargetSistemasTest\obj\Debug\TesteTarget.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\TargetSistemasTest\obj\Debug\TesteTarget.exe
+C:\Users\Lenovo\Desktop\TargetSistemasTest\obj\Debug\TesteTarget.pdb
+C:\Users\Lenovo\Desktop\TargetSistemasTest\bin\Debug\dados.json
