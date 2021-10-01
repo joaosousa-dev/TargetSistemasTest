@@ -16,6 +16,7 @@ namespace TesteTarget
 
             while (true)
             {
+                //não foi feito validação 
                 int option;
                 Console.Clear();
                 Console.WriteLine("Escolha uma opção\n");
@@ -45,6 +46,7 @@ namespace TesteTarget
                         break;
                     default:
                         Console.WriteLine("Insira um valor válido");
+                        Console.ReadKey();
                         break;
                 }
             }
@@ -134,6 +136,7 @@ namespace TesteTarget
             Console.WriteLine("O menor faturamento foi de: {0} dia {1}", menor, diaMenor);
             Console.WriteLine("A média de faturamento por mes é: " + mediamensal);
             Console.WriteLine("Foram {0} dias que o faturamento foi maior que a media mensal de {1}", count, mediamensal);
+            Console.WriteLine("Pressione qualquer tecla para sair");
             Console.ReadKey();
 
 
@@ -164,6 +167,7 @@ namespace TesteTarget
                 lenght--;
             }
             Console.WriteLine(inversoArray); ;
+            Console.WriteLine("Pressione qualquer tecla para sair");
             Console.ReadKey();
 
         }
